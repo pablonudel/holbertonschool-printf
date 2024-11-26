@@ -3,19 +3,22 @@
 
 #include <unistd.h>
 #include <stdio.h>
+#include <stdarg.h>
 
 int _printf(const char *format, ...);
+int _putchar(char c);
+int print_char(va_list args);
 
 /**
- * struct type_option - structure with type option and function pointer char.
- * @option: The type option
- * @convert_option: function pointer
+ * struct spec_opt - ...
+ * @specifier: ...
+ * @convert: ...
  *
  * Description
  */
-typedef struct type_option
+typedef struct spec_opt
 {
 	char *specifier;
-	int (*specifier_len)(va_list args);
-} type_option_t;
+	int (*convert)(va_list args);
+} spec_opt_t;
 #endif

@@ -1,49 +1,41 @@
 #include "main.h"
 /**
- * print_char - ...
- * @args: va_list args
- *
- * Return: int
- */
-int print_char(va_list args)
-{
-	return (write(1, va_arg(args, int), 1));
-}
-/**
  * _printf - ...
- * @format: char pointer
+ * @format: ...
  *
  * Return: int
  */
 int _printf(const char *format, ...)
 {
-	int i = 0, j = 0;
+	int i = 0, j = 0, len = 0;
 	va_list args;
 
-	type_option_t options[] = {
+	spec_opt_t options[] = {
 		{"c", print_char},
 		{NULL, NULL}
 	};
 
 	va_start(args, format);
-	
+
 	while (format[i] && format != NULL)
 	{
 		j = 0;
-		if (format[i] == '%' && format[i + 1] != '\0')
+		if (format[i] == '%' && format[i + 1])
 		{
-			while (options[j].specifier && options[j].specifier[0] == format[i + 1])
+			while (options[j].specifier && *options[j].specifier == format[i + 1])
 			{
-				options[j].specifier_len(args);
+				len += options[j].convert(args);
+				i += 2;
 				j++;
 			}
 		}
-		else
-			exit(98);
+		len++;
 		_putchar(format[i]);
 		i++;
 	}
 
 	va_end(args);
+
+	return (len);
 
 }
