@@ -12,30 +12,34 @@ int _printf(const char *format, ...)
 
 	spec_opt_t options[] = {
 		{"c", print_char},
+		{"s", print_str},
+		{"%", print_perc},
 		{NULL, NULL}
 	};
 
 	va_start(args, format);
-
-	while (format[i] && format != NULL)
+	while (format[i])
 	{
 		j = 0;
-		if (format[i] == '%' && format[i + 1])
+
+		/* to match into the specifiers */
+		while (options[j].specifier)
 		{
-			while (options[j].specifier && *options[j].specifier == format[i + 1])
+			if (format[i] == '%' && *options[j].specifier == format[i + 1])
 			{
+				/* each associated function should print the arg */
 				len += options[j].convert(args);
+				/* jump to next character after specifier */
 				i += 2;
-				j++;
 			}
+			j++;
 		}
-		len++;
 		_putchar(format[i]);
+		len++;
 		i++;
 	}
 
 	va_end(args);
 
 	return (len);
-
 }
