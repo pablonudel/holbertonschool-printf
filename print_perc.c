@@ -7,9 +7,9 @@
  */
 int print_perc(va_list args)
 {
-	int c = va_arg(args, int);
+	int arg = va_arg(args, int);
 
-	if (c)
+	if (arg)
 		_putchar(37);
 
 	return (1);
