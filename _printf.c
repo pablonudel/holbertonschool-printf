@@ -13,6 +13,7 @@ int _printf(const char *format, ...)
 	spec_opt_t options[] = {
 		{"c", print_char},
 		{"s", print_str},
+		{"%", print_perc},
 		{NULL, NULL}
 	};
 
@@ -38,5 +39,4 @@ int _printf(const char *format, ...)
 	va_end(args);
 
 	return (len);
-
 }
