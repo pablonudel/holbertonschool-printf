@@ -12,15 +12,15 @@ int _printf(const char *format, ...)
 	va_list args;
 
 	spec_opt_t options[] = {
-		{"c", print_char},
-		{"s", print_str},
-		{"%", print_perc},
-		{"i", print_i_d},
-		{"d", print_i_d},
+		{"c", print_char}, {"s", print_str}, {"%", print_perc},
+		{"i", print_i_d}, {"d", print_i_d},
 		{NULL, NULL}
 	};
 
 	va_start(args, format);
+	if (format == NULL)
+		return (-1);
+
 	while (format[i])
 	{
 		j = 0;
@@ -43,6 +43,5 @@ int _printf(const char *format, ...)
 	}
 
 	va_end(args);
-
 	return (len);
 }
