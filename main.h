@@ -7,10 +7,10 @@
 
 int _printf(const char *format, ...);
 int _putchar(char c);
-int print_char(va_list args);
-int print_str(va_list args);
-int print_perc(va_list args);
-int print_i_d(va_list args);
+int print_char(va_list);
+int print_str(va_list);
+int print_perc(va_list);
+int print_i_d(va_list);
 
 /**
  * struct spec_opt - structure
@@ -22,6 +22,6 @@ int print_i_d(va_list args);
 typedef struct spec_opt
 {
 	char *specifier;
-	int (*convert)(va_list args);
+	int (*convert)(va_list);
 } spec_opt_t;
 #endif
