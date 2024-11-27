@@ -35,7 +35,7 @@ int print_i_d(va_list args)
 		digit = digit * pow;
 		tmp_num = (tmp_num * 10) - digit;
 
-		/* working loop until n100, where two 0 are one in integer */
+		/* working loop until the number has a 0 in between */
 	}
 
 	_putchar('0' + last_dig);
