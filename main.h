@@ -13,11 +13,11 @@ int print_perc(va_list args);
 int print_i_d(va_list args);
 
 /**
- * struct spec_opt - ...
- * @specifier: ...
- * @convert: ...
+ * struct spec_opt - structure
+ * @specifier: char - holds the specifier
+ * @convert: int - holds the associated function
  *
- * Description
+ * Structure that holds the specifier selected and the associated function
  */
 typedef struct spec_opt
 {

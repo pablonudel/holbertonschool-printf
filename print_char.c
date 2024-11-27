@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * print_char - ...
- * @args: ...
+ * print_char - prints one character
+ * @args: list of arguments
  *
- * Return: int
+ * Return: int - 1 as length
  */
 int print_char(va_list args)
 {
