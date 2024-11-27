@@ -1,9 +1,10 @@
 #include "main.h"
 /**
- * _printf - ...
- * @format: ...
+ * _printf - Prints the argument according to a specifier
+ * and the associated function
+ * @format: a character string of zero or more directives
  *
- * Return: int
+ * Return: int - length of the total string
  */
 int _printf(const char *format, ...)
 {

@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * print_str - ...
- * @args: ...
+ * print_str - prints all characters of a string
+ * @args: list of arguments
  *
- * Return: int
+ * Return: int - length of the string
  */
 int print_str(va_list args)
 {

@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * print_i_d - ...
- * @args: ...
+ * print_i_d - prints an integer
+ * @args: list of arguments
  *
- * Return: int
+ * Return: int - as length
  */
 int print_i_d(va_list args)
 {
