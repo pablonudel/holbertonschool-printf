@@ -9,8 +9,8 @@ int print_perc(va_list args)
 {
 	int arg = va_arg(args, int);
 
-	if (arg)
-		_putchar(37);
+	arg = '%';
 
+	_putchar(arg);
 	return (1);
 }
