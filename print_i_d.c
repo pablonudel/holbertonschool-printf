@@ -8,36 +8,37 @@
 int print_i_d(va_list args)
 {
 	int arg = va_arg(args, int);
-	int digit = arg, last_dig, tmp_num, pow, len = 0;
+	int digit, tmp_num = arg, last_dig, pow = 1, len = 0;
 
 	if (arg < 0)
 	{
-		digit = arg * -1;
+		arg = arg * -1;
 		_putchar('-');
 		len++;
 	}
 
-	last_dig = digit % 10;
-	tmp_num = (digit - last_dig) / 10;
+	last_dig = arg % 10;
+	tmp_num = arg / 10;
 
-	while (tmp_num > 0)
+	if (tmp_num > 0)
 	{
-		digit = tmp_num;
-		while (digit % 10 != digit)
-			digit = (digit - (digit % 10)) / 10;
-
-		_putchar('0' + digit);
-		len++;
-		pow = 10;
-		while (pow < tmp_num)
+		while (tmp_num / 10 != 0)
+		{
+			tmp_num = tmp_num / 10;
 			pow = pow * 10;
+		}
 
-		digit = digit * pow;
-		tmp_num = (tmp_num * 10) - digit;
-
-		/* working loop until the number has a 0 in between */
+		tmp_num = arg / 10;
+		while (pow > 0)
+		{
+			digit = tmp_num / pow;
+			_putchar(digit + '0');
+			tmp_num = tmp_num - (digit * pow);
+			pow = pow / 10;
+			len++;
+		}
 	}
 
-	_putchar('0' + last_dig);
+	_putchar(last_dig + '0');
 	return (len + 1);
 }
