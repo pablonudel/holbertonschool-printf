@@ -7,18 +7,16 @@
  */
 int print_str(va_list args)
 {
-	int len = 0, i;
+	int len = 0;
 	char *arg = va_arg(args, char *);
 
-	if (arg == NULL)
+	if (!arg)
 		arg = "(null)";
 
-	while (arg[len] != '\0')
-		len++;
-
-	for (i = 0; i < len; i++)
+	while (arg[len])
 	{
-		_putchar(arg[i]);
+		_putchar(arg[len]);
+		len++;
 	}
 
 	return (len);

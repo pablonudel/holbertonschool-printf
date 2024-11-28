@@ -7,9 +7,7 @@
  */
 int print_perc(va_list args)
 {
-	int arg = va_arg(args, int);
-
-	arg = '%';
+	(void)args;
 
 	_putchar(arg);
 	return (1);
