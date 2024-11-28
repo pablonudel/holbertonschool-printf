@@ -13,7 +13,7 @@ int print_i_d(va_list args)
 
 	if (arg < 0)
 	{
-		_putchat('-');
+		_putchar('-');
 		arg *= -1;
 		len++;
 	}
