@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
 		j = 0;
 		while (options[j].specifier)
 		{
-			if (format[i + 1] == *options[j].specifier)
+			if (format[i] == '%' && format[i + 1] == *options[j].specifier)
 			{
 				len += options[j].convert(args);
 				i += 2;
