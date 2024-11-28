@@ -8,7 +8,8 @@
 int print_i_d(va_list args)
 {
 	int arg = va_arg(args, int);
-	int digit, tmp_num = arg, last_dig, pow = 1, len = 0;
+	int digit, last_dig, pow = 1, len = 0;
+	unsigned int tmp_num = arg;
 
 	if (arg < 0)
 	{
