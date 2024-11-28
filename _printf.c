@@ -2,9 +2,9 @@
 /**
  * _printf - Prints the argument according to a specifier
  * and the associated function
- * @format: a character string of zero or more directives
+ * @format: a character string of zero or more directives.
  *
- * Return: int - length of the total string
+ * Return: int - length of the total string.
  */
 int _printf(const char *format, ...)
 {
@@ -13,26 +13,21 @@ int _printf(const char *format, ...)
 
 	spec_opt_t options[] = {
 		{"c", print_char}, {"s", print_str}, {"%", print_perc},
-		{"i", print_i_d}, {"d", print_i_d},
-		{NULL, NULL}
+		{"i", print_i_d}, {"d", print_i_d}, {NULL, NULL}
 	};
 
 	va_start(args, format);
-	if (format == NULL)
+	if (format == NULL || (format[i] == '%' && format[i + 1] != '\0'))
 		return (-1);
 
 	while (format[i])
 	{
 		j = 0;
-
-		/* to match into the specifiers */
 		while (options[j].specifier)
 		{
-			if (format[i] == '%' && *options[j].specifier == format[i + 1])
+			if (format[i + 1] == *options[j].specifier)
 			{
-				/* each associated function should print the arg */
 				len += options[j].convert(args);
-				/* jump to next character after specifier */
 				i += 2;
 			}
 			j++;
@@ -41,7 +36,6 @@ int _printf(const char *format, ...)
 		len++;
 		i++;
 	}
-
 	va_end(args);
 	return (len);
 }
