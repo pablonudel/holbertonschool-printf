@@ -152,8 +152,8 @@ Unknown:[%r]
 
 
 ## 6. Man Page: A Comprehensive Guide 🟥
-## 7. Elements ⚒︎
- 
+## 7. Specifiers ⚒︎
+List of specifiers that the function handles:
   specifiers	|DESCRIPTION|
 |:---:|:---:|
 |`%c`	|Print a single character.|
