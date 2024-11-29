@@ -15,30 +15,30 @@ to compile the program we must use this compiler:
 
 Here’s a summarized version of the general requirements for your project:
 
-Allowed Editors: `vi`, `vim`, `emacs`.
+* Allowed Editors: `vi`, `vim`, `emacs`.
 
-Compilation Environment: Ubuntu 20.04 LTS with gcc using the 
+* Compilation Environment: Ubuntu 20.04 LTS with gcc using the 
 
 flags: gcc -Wall -Werror -Wextra -pedantic -std=gnu89.
 
-File Format: All files must end with a new line.
+* File Format: All files must end with a new line.
 
-README.md: Include a README.md file at the root of the project.
+* README.md: Include a README.md file at the root of the project.
 
-Code Style: Follow the Betty style (checked with betty-style.pl and betty-doc.pl).
+* Code Style: Follow the Betty style (checked with betty-style.pl and betty-doc.pl).
 
-Global Variables: No global variables allowed.
+* Global Variables: No global variables allowed.
 
-Function Limit: Maximum of 5 functions per file.
+* Function Limit: Maximum of 5 functions per file.
 
-Main.c Files: Do not push provided main.c files; they will be 
+* Main.c Files: Do not push provided main.c files; they will be 
 ignored during compilation.
 
-Function Prototypes: Declare all function prototypes in a main.h header file.
+* Function Prototypes: Declare all function prototypes in a main.h header file.
 
-Header Files: Include guards must be present in all header files.
+* Header Files: Include guards must be present in all header files.
 
-_putchar Function: If needed, you must implement the _putchar function yourself.
+* _putchar Function: If needed, you must implement the _putchar function yourself.
 
 ## 4. Examples of Usage
 Example program that uses _printf:
