@@ -152,7 +152,7 @@ Unknown:[%r]
 
 
 ## 6. Man Page: A Comprehensive Guide 🟥
-## Elements ⚒︎
+## 7. Elements ⚒︎
  
   specifiers	|DESCRIPTION|
 |:---:|:---:|
@@ -162,12 +162,12 @@ Unknown:[%r]
 |`%d`	|Print a decimal integer.
 |`%i`	|Print an integer (same as %d).|
 
-## Authors 🧑‍🧑‍🧒
-
-- [@pablonudel](https://www.github.com/pablonudel)
-- [@Iyed13tns](https://www.github.com/Iyed13tns)
-## Flowchart 📊
+## 8. Flowchart 📊
 
 ![App Screenshot](https://raw.githubusercontent.com/pablonudel/holbertonschool-printf/refs/heads/pablonudel/printf_funtion_flowchart.jpg)
 
 
+## Authors 🧑‍🧑‍🧒
+
+- [@pablonudel](https://www.github.com/pablonudel)
+- [@Iyed13tns](https://www.github.com/Iyed13tns)
