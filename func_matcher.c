@@ -16,7 +16,7 @@ int func_matcher(const char *format, int i,
 	int j = 0;
 
 	if (format[i + 1] == '\0')
-		return (-1);
+		return (*len);
 
 	while (options[j].specifier)
 	{
