@@ -3,15 +3,15 @@
 
 ## 1. Overview
 
-The _printf project is to recreate a simple version of the printf function in C. This function displays formatted text on the screen using a format string and additional values.
+The _printf project aims to recreate a simplified version of the printf function in C. This function is designed to display formatted output on the screen using a format string along with additional arguments.
 
-The goal is to learn how to handle multiple arguments in a function, organize the code, and write neatly.
-## The compile command
+The primary goal of this project is to learn how to handle multiple arguments within a function, organize your code efficiently, and develop clean, maintainable coding practices.
+## 2. The compile command
 
 to compile the program we must use this compiler:
 
-gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c
-## Requirements
+`gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c
+##  3. Requirements
 
 Here’s a summarized version of the general requirements for your project:
 
@@ -40,7 +40,7 @@ Header Files: Include guards must be present in all header files.
 
 _putchar Function: If needed, you must implement the _putchar function yourself.
 
-## 2. Examples of Usage
+## 4. Examples of Usage
 Example program that uses _printf:
 ```c
 #include <stdio.h>
@@ -74,7 +74,7 @@ Integer: 42, Negative: -42
 ```
 
 
-## Testing
+## 5. Testing
 To test we use the main.c provided by holberton
 here is the code:
 
@@ -152,8 +152,9 @@ Unknown:[%r]
 Unknown:[%r]
 ```
 
-## 4. Man Page: A Comprehensive Guide
-## 3. Flowchart of Function Workflow
+
+## 6. Man Page: A Comprehensive Guide
+## 7. Flowchart of Function Workflow
 ## Authors
 
 - [@pablonudel](https://www.github.com/pablonudel)
