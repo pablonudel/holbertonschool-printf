@@ -1,25 +1,23 @@
-# Project Function _printf
+# Project Function _printf 🤖
 
 
-## 1. Overview
+## 1. Overview 📚
 
 The _printf project aims to recreate a simplified version of the printf function in C. This function is designed to display formatted output on the screen using a format string along with additional arguments.
 
 The primary goal of this project is to learn how to handle multiple arguments within a function, organize your code efficiently, and develop clean, maintainable coding practices.
-## 2. The compile command
+## 2. The compile command ⬇️
 
 to compile the program we must use this compiler:
 
-`gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c
-##  3. Requirements
+`gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c'
+##  3. Requirements 📝
 
-Here’s a summarized version of the general requirements for your project:
+* Here’s a summarized version of the general requirements for your project:
 
 * Allowed Editors: `vi`, `vim`, `emacs`.
 
 * Compilation Environment: Ubuntu 20.04 LTS with gcc using the 
-
-flags: gcc -Wall -Werror -Wextra -pedantic -std=gnu89.
 
 * File Format: All files must end with a new line.
 
@@ -29,18 +27,18 @@ flags: gcc -Wall -Werror -Wextra -pedantic -std=gnu89.
 
 * Global Variables: No global variables allowed.
 
-* Function Limit: Maximum of 5 functions per file.
+  Function Limit: Maximum of 5 functions per file.
 
 * Main.c Files: Do not push provided main.c files; they will be 
-ignored during compilation.
+  ignored during compilation.
 
 * Function Prototypes: Declare all function prototypes in a main.h header file.
 
-* Header Files: Include guards must be present in all header files.
+* eader Files: Include guards must be present in all header files.
 
 * _putchar Function: If needed, you must implement the _putchar function yourself.
 
-## 4. Examples of Usage
+## 4. Examples of Usage 📋
 Example program that uses _printf:
 ```c
 #include <stdio.h>
@@ -74,7 +72,7 @@ Integer: 42, Negative: -42
 ```
 
 
-## 5. Testing
+## 5. Testing 🔬
 To test we use the main.c provided by holberton
 here is the code:
 
@@ -153,9 +151,23 @@ Unknown:[%r]
 ```
 
 
-## 6. Man Page: A Comprehensive Guide
-## 7. Flowchart of Function Workflow
-## Authors
+## 6. Man Page: A Comprehensive Guide 🟥
+## Elements ⚒︎
+ 
+  specifiers	|DESCRIPTION|
+|:---:|:---:|
+|`%c`	|Print a single character.|
+|`%s`	|Print a string.|
+|`%%`	|Print a literal percent sign.|
+|`%d`	|Print a decimal integer.
+|`%i`	|Print an integer (same as %d).|
+
+## Authors 🧑‍🧑‍🧒
 
 - [@pablonudel](https://www.github.com/pablonudel)
 - [@Iyed13tns](https://www.github.com/Iyed13tns)
+## Flowchart 📊
+
+![App Screenshot](https://raw.githubusercontent.com/pablonudel/holbertonschool-printf/refs/heads/pablonudel/printf_funtion_flowchart.jpg)
+
+
