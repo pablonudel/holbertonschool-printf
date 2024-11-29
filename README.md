@@ -10,14 +10,14 @@ The primary goal of this project is to learn how to handle multiple arguments wi
 
 to compile the program we must use this compiler:
 
-`gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c'
+`gcc -Wall -Wextra -Werror -pedantic -std=gnu89 -Wno-format *.c`
 ##  3. Requirements 📝
 
 * Here’s a summarized version of the general requirements for your project:
 
 * Allowed Editors: `vi`, `vim`, `emacs`.
 
-* Compilation Environment: Ubuntu 20.04 LTS with gcc using the 
+* Compilation Environment: Ubuntu 20.04 LTS with gcc 
 
 * File Format: All files must end with a new line.
 
@@ -34,7 +34,7 @@ to compile the program we must use this compiler:
 
 * Function Prototypes: Declare all function prototypes in a main.h header file.
 
-* eader Files: Include guards must be present in all header files.
+* header Files: Include guards must be present in all header files.
 
 * _putchar Function: If needed, you must implement the _putchar function yourself.
 
