@@ -1,0 +1,115 @@
+.\" Man page for _printf
+.TH _printf 3 "November 29, 2024" "0.1" "Function Manual"
+.SH NAME
+
+_printf \- Custom formatted output conversion function
+
+.SH SYNOPSIS
+.PP
+.I #include "main.h"
+
+.I int _printf(const char *format, ...);
+.SH DESCRIPTION
+.PP
+The _printf function is a custom implementation of the standard printf function 
+that produces output to stdout, the standard output stream. It processes a format 
+string and accepts a limited number of arguments, matching them with their respective 
+format specifiers.
+.PP
+The function processes the format string, scanning for format specifiers that 
+start with the '%' character. The corresponding output is generated for each 
+specifier by calling the appropriate function from a pre-defined list of handlers.
+.PP
+.B Conversion specifiers
+.PP
+Characters that specifies the type of conversion to be applied.
+.br
+The supported specifiers are:
+
+.RS
+\- 
+.B 'c' 
+: Prints a character.
+
+\- 
+.B 's' 
+: Prints a string.
+
+\- 
+.B '%' 
+: Prints a literal percent sign.
+
+\- 
+.B 'i' 
+: Prints an integer (integer).
+
+\- 
+.B 'd' 
+: Prints a decimal (signed decimal integer).
+.RE
+.PP
+The function uses variadic arguments, which are handled using the
+va_list type and associated macros such as va_start and va_end.
+.PP
+This function does not handle all possible format specifiers available in the 
+standard printf function and is limited to the set listed above.
+.PP
+It also does not reproduce the buffer handling of the C library printf function, or 
+handles of flag characters, field width, precision and length modifiers.
+.SH RETURN VALUE
+.PP
+On success, the function returns the total length of the printed string (excluding the null 
+terminator).
+
+.RS
+\- If the format string contains only a "%" character the function will return -1.
+
+
+\- If an unsupported specifier is encountered, the function will print the "%" character 
+followed by this unsupported character.
+
+
+\- If an invalid format string is encountered, the function returns 
+the length of the string processed so far.
+.RE
+.PP
+.SH EXAMPLES
+.PP
+.B Print a character
+
+.I _printf("Character:[%c]", 'H');
+.RS
+Output: Character:[H]
+.br
+Return value: 14
+.RE
+.PP
+.B Print a string
+
+.I _printf("String:[%s]", "I am a string !");
+.RS
+Output: String:[I am a string!]
+.br
+Return value: 24
+.RE
+.PP
+.B Print a literal percent sign
+
+.I _printf("Percent:[%%]");
+.RS
+Output: Percent:[%]
+.br
+Return value: 12
+.RE
+.PP
+.B Print an integer/decimal
+
+.I _printf("Positive:[%d], Negative[%i]", 1024, -1024);
+.RS
+Output: Positive:[1024], Negative[-1024]
+.br
+Return value: 33
+.RE
+.SH AUTHORS
+.PP
+Pablo Nudel & Uyed Debara
