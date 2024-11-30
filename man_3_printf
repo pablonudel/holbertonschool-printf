@@ -48,22 +48,31 @@ The supported specifiers are:
 : Prints a decimal (signed decimal integer).
 .RE
 .PP
-If the format string contains only a "%" character the function will return -1.
-If an unsupported specifier is encountered, the function will print the "%" character 
-followed by this unsupported character.
-.PP
-The function returns the total length of the printed string (excluding the null 
-terminator). If there is an invalid format string, the function returns -1.
-.PP
 The function uses variadic arguments, which are handled using the
 va_list type and associated macros such as va_start and va_end.
 .PP
 This function does not handle all possible format specifiers available in the 
 standard printf function and is limited to the set listed above.
+.PP
+It also does not reproduce the buffer handling of the C library printf function, or 
+handles of flag characters, field width, precision and length modifiers.
 .SH RETURN VALUE
 .PP
-On success, the total length of the output string is returned. If there is an 
-invalid format string, the function returns -1.
+On success, the function returns the total length of the printed string (excluding the null 
+terminator).
+
+.RS
+\- If the format string contains only a "%" character the function will return -1.
+
+
+\- If an unsupported specifier is encountered, the function will print the "%" character 
+followed by this unsupported character.
+
+
+\- If an invalid format string is encountered, the function returns 
+the length of the string processed so far.
+.RE
+.PP
 .SH EXAMPLES
 .PP
 .B Print a character
@@ -104,4 +113,3 @@ Return value: 33
 .SH AUTHORS
 .PP
 Pablo Nudel & Uyed Debara
-
